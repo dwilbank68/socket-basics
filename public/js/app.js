@@ -6,6 +6,9 @@ socket.on('connect', function(){
 
 socket.on('message', function(message){
     console.log(message.text);
+
+    $('.messages')
+        .append('<p>'+message.text+'</p>');
 });
 
 
